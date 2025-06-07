@@ -1,11 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-import sys
-from pathlib import Path
-# Get the parent directory and add it to sys.path
-# parent_dir = Path(__file__).resolve().parent.parent
-# sys.path.append(str(parent_dir))
 from SwarmSwIM import Simulator
 from SwarmSwIM import Agent
 
