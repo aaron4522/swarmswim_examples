@@ -21,7 +21,7 @@
         Parameters are: 
             Density [vortexes/100m^2]
             Intensity [m/s]: -->
-        <vortex_currents> 30 3.2 </vortex_currents>
+        <vortex_currents> 30 1.2 </vortex_currents>
 
         <!-- Define wave sinusoidal current, Global -->
         <!-- Globally applied, sinusoidal time-dependent noise -->

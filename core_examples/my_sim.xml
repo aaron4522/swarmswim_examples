@@ -29,9 +29,9 @@
             <!-- Add each contribution separately -->
             <wave1>
                 <!-- Peak intensity in m/s -->
-                <amplitude> 0.0 </amplitude> 
+                <amplitude> 1.5 </amplitude> 
                 <!-- Wave frequency in Hz -->
-                <frequency> 0.0 </frequency>
+                <frequency> 0.1 </frequency>
                 <!-- Direction of wave current [degree] -->
                 <direction> 0.0 </direction>
                 <!-- Time shift of wave normalized [0,2pi] -->
@@ -98,15 +98,15 @@
         </agent_type>
 
 
-        <!-- Uncomment to add different type of agents
-        <agent_type> 
-            <description>your_file.xml</description>
+        <!-- Uncomment to add different type of agents -->
+        <!-- <agent_type> 
+            <description>my_agent.xml</description>
             <name>B</name>
             <state>
-                0.0  0.0  0.0  0.0
+                4.0  0.0  0.0  90.0
             </state>
-        </agent_type> 
-        -->
+        </agent_type>  -->
+       
 
 
     </agents>
