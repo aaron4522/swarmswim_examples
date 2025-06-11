@@ -13,7 +13,7 @@ S.add(AgentB)
 # add command
 # AgentB.cmd_yawrate = 15.0
 # AgentB.cmd_planar = (10.0, 0)
-AgentB.cmd_local_vel = 1.0
+# AgentB.cmd_local_vel = 1.0
 
 for agent in S.agents:
     agent.cmd_forces = 1.5

@@ -22,23 +22,23 @@ Animation = Plotter(S,artistics=[circle])
 Channel = AcousticChannel()
 # send message
 call_response = Channel.send(AgentB, S, duration=1.0, payload="Hello from B01")
-print(f"\n Sending 1st msg result: {call_response} at {S.time:.2f} s")
+print(f"\nSending 1st msg result: {call_response} at {S.time:.2f} s")
 
-TIME_2ND_MSG = 0.5
+# TIME_2ND_MSG = 0.5
 # TIME_2ND_MSG = 1.5
 # TIME_2ND_MSG = 3
 
-def animation_callback():
-    """Move the simulation foward 1 step."""
-    S.tick()  # advance 1 time step
-    events = Channel(S) # spin acoustic channel
-    # if anything happen print
-    if events:
-        print(f"time: {S.time}: {events}")
-    # send second msg
-    if S.time > TIME_2ND_MSG and S.time - TIME_STEP <= TIME_2ND_MSG:
-        call_response = Channel.send(AgentC, S, duration=1.0, payload="Hello from C01")
-        print(f"\n Sending 2st msg result: {call_response} at {S.time:.2f} s")
+# def animation_callback():
+#     """Move the simulation foward 1 step."""
+#     S.tick()  # advance 1 time step
+#     events = Channel(S) # spin acoustic channel
+#     # if anything happen print
+#     if events:
+#         print(f"time: {S.time}: {events}")
+#     # send second msg
+#     if S.time > TIME_2ND_MSG and S.time - TIME_STEP <= TIME_2ND_MSG:
+#         call_response = Channel.send(AgentC, S, duration=1.0, payload="Hello from C01")
+#         print(f"\n Sending 2st msg result: {call_response} at {S.time:.2f} s")
 
-# MAIN
-Animation.update_plot(callback=animation_callback)
+# # MAIN
+# Animation.update_plot(callback=animation_callback)

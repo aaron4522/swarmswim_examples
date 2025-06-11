@@ -29,11 +29,11 @@
             <!-- Add each contribution separately -->
             <wave1>
                 <!-- Peak intensity in m/s -->
-                <amplitude> 1.5 </amplitude> 
+                <amplitude> 0.0 </amplitude> 
                 <!-- Wave frequency in Hz -->
-                <frequency> 0.1 </frequency>
+                <frequency> 0.0 </frequency>
                 <!-- Direction of wave current [degree] -->
-                <direction> 0.0 </direction>
+                <direction> -135.0 </direction>
                 <!-- Time shift of wave normalized [0,2pi] -->
                 <shift> 0.0 </shift>
             </wave1>
@@ -92,20 +92,20 @@
                 <!-- Initial state, one line for each agent -->
                 <!-- x, y, z, psi -->
                 0.0  0.0  1.0  0.0
-                2.0  0.0  1.0  90.0
+                <!-- 2.0  0.0  1.0  90.0 -->
                 <!-- Add more lines to add agents -->
             </state>
         </agent_type>
 
 
         <!-- Uncomment to add different type of agents -->
-        <!-- <agent_type> 
+        <agent_type> 
             <description>my_agent.xml</description>
             <name>B</name>
             <state>
-                4.0  0.0  0.0  90.0
+                0.0  4.0  0.0  0.0
             </state>
-        </agent_type>  -->
+        </agent_type> 
        
 
 
