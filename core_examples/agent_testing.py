@@ -3,13 +3,18 @@ from SwarmSwIM import Plotter
 from SwarmSwIM import Agent
 import matplotlib.pyplot as plt
 
+# import os
+# DIR_FILE = os.path.dirname(__file__)
 
 # initiate simulator at 24 fps
 S = Simulator(1/24, sim_xml="my_sim.xml")
+# S = Simulator(1/24, sim_xml=os.path.join(DIR_FILE,"my_sim.xml"))
 
 # add additional agents
 AgentB = Agent('B01',initialPosition=(4.0, 0., 0.), initialHeading=90.0, agent_xml="my_agent.xml")
+# AgentB = Agent('B01',initialPosition=(4.0, 0., 0.), initialHeading=90.0, agent_xml=os.path.join(DIR_FILE,"my_agent.xml"))
 S.add(AgentB)
+
 # add command
 # AgentB.cmd_yawrate = 15.0
 # AgentB.cmd_planar = (10.0, 0)

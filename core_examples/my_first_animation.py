@@ -2,9 +2,12 @@ from SwarmSwIM import Simulator
 from SwarmSwIM import Plotter
 import matplotlib.pyplot as plt
 
+# import os
+# DIR_FILE = os.path.dirname(__file__)
 
 # initiate simulator at 24 fps
 S = Simulator(1/24, sim_xml="my_sim.xml")
+# S = Simulator(1/24, sim_xml=os.path.join(DIR_FILE,"my_sim.xml"))
 
 for agent in S.agents:
     agent.cmd_fhd(forceNewton=2.5, headingDegrees=180, depthMeters=0.5)

@@ -92,20 +92,20 @@
                 <!-- Initial state, one line for each agent -->
                 <!-- x, y, z, psi -->
                 0.0  0.0  1.0  0.0
-                <!-- 2.0  0.0  1.0  90.0 -->
+                2.0  0.0  1.0  90.0
                 <!-- Add more lines to add agents -->
             </state>
         </agent_type>
 
 
         <!-- Uncomment to add different type of agents -->
-        <agent_type> 
+        <!-- <agent_type> 
             <description>my_agent.xml</description>
             <name>B</name>
             <state>
                 0.0  4.0  0.0  0.0
             </state>
-        </agent_type> 
+        </agent_type>  -->
        
 
 

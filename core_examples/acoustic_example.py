@@ -4,13 +4,21 @@ from SwarmSwIM import Agent
 from SwarmSwIM import AcousticChannel
 import matplotlib.pyplot as plt
 
+# import os
+# DIR_FILE = os.path.dirname(__file__)
+
 TIME_STEP = 1 / 24
 # initiate simulator at 24 fps
 S = Simulator(TIME_STEP, sim_xml="my_sim.xml")
+# S = Simulator(TIME_STEP, sim_xml=os.path.join(DIR_FILE,"my_sim.xml"))
 
 # add additional agents
 AgentB = Agent('B01',initialPosition=(750.0, 0., 0.), agent_xml="my_agent.xml")
 AgentC = Agent('C01',initialPosition=(-750.0, 0., 0.), agent_xml="my_agent.xml")
+
+# AgentB = Agent('B01',initialPosition=(750.0, 0., 0.), agent_xml=os.path.join(DIR_FILE,"my_agent.xml"))
+# AgentC = Agent('C01',initialPosition=(-750.0, 0., 0.), agent_xml=os.path.join(DIR_FILE,"my_agent.xml"))
+
 S.add(AgentB, AgentC)
 
 # adding optinal graphics
