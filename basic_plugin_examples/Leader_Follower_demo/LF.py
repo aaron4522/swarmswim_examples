@@ -18,18 +18,21 @@ S.agents[-1].cmd_fhd(1.0, 0.0, 66)
 # Emulate a bias error, different for each agent in a range of +/- 2 degrees
 for agent in S.agents: agent.e_heading[0]=S.rnd.uniform(-2.0,2.0)
 
-
+timer = 30
 def animation_callback():
     ''' callback function, move the simulation foward 1 step'''
+    global timer
+
     S.tick()                    # Advance dynamics of 1 time step
     Detection(S)                # Compute Detections
 
     # execture controller of follower agents
     execute_control(S.agents[0])    
     execute_control(S.agents[1])
-    # at time 30s and 45s change direction of front agent
-    if S.time > 30 and S.time< 30.2: S.agents[-1].cmd_fhd(1.0, 90.0, 66)
-    if S.time > 45 and S.time< 45.2: S.agents[-1].cmd_fhd(1.0, 180.0, 66)
+    # every 20 seconds rotate leader 90 degrees
+    if S.time > timer:
+        timer += 20 # seconds
+        S.agents[-1].cmd_heading += 90 # degrees
 
 def execute_control(agent):
     
