@@ -23,3 +23,11 @@ def animation_callback():
 
 # MAIN
 Animation.update_plot(callback=animation_callback)
+
+# Test acoustic ranging
+range = S.acoustic_range(S.agents[0], S.agents[1])
+range_OWTT = S.OWTT_acoustic_range(S.agents[0], S.agents[1])
+doppler = S.doppler(S.agents[0], S.agents[1])
+print (f"acustion range {range:.2f} m \
+       \nwith clock drift {range_OWTT:.2f} m \
+       \nDoppler {doppler:.3f} m/s")
